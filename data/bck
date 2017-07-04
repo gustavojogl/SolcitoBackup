@@ -1,0 +1,1 @@
+*/5 * * * * root $(which php) /var/www/html/app/cron.php > /var/log/solbackup.log
