@@ -14,7 +14,7 @@ git clone https://github.com/gustavojogl/SolcitoBackup.git app/
 
 Permisos:
 chmod 777 logs/ temp/ -R
-chonw www-data:www-data
+chown www-data:www-data
 
 Setear Clave de Acceso:
 Editar el archivo settings.php y cambiar el valor 'password' => 'solcito' 
@@ -27,3 +27,16 @@ Setear en el cron cada 5 minutos
 Acceso:
 
 http://ipdetuservidor/app/
+
+
+### Usage Instructions
+```PHP
+// As an instance...
+$queue->push('SendEmail', array('message' => $message));
+
+// If setAsGlobal has been called...
+Queue::push('SendEmail', array('message' => $message));
+```
+
+For further documentation on using the queue, consult the [Laravel framework documentation](https://laravel.com/docs).
+
