@@ -2,21 +2,28 @@ Solcito Backup
 
 ### Requerimientos:
 
-
 ### Instalación:
 
 Ejemplo en un servidor apache en raiz
 
-//cd /var/www/html/
-
+```PHP
+//
+cd /var/www/html/
+```
 Clonar Repositorio:
 
-//git clone https://github.com/gustavojogl/SolcitoBackup.git app/
-
+```PHP
+// 
+git clone https://github.com/gustavojogl/SolcitoBackup.git app/
+```
 Permisos:
 
-//chmod 777 logs/ temp/ -R
-//chown www-data:www-data
+```PHP
+//
+chmod 777 logs/ temp/ -R
+//
+chown www-data:www-data
+```
 
 Setear Clave de Acceso:
 Editar el archivo settings.php y cambiar el valor 'password' => 'solcito' 
@@ -31,12 +38,6 @@ Acceso:
 http://ipdetuservidor/app/
 
 
-### Usage Instructions
-```PHP
-// As an instance...
-$queue->push('SendEmail', array('message' => $message));
-
-// If setAsGlobal has been called...
 Queue::push('SendEmail', array('message' => $message));
 ```
 
