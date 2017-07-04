@@ -7,21 +7,17 @@ Solcito Backup
 Ejemplo en un servidor apache en raiz
 
 ```PHP
-//
 cd /var/www/html/
 ```
 Clonar Repositorio:
 
 ```PHP
-// 
 git clone https://github.com/gustavojogl/SolcitoBackup.git app/
 ```
 Permisos:
 
 ```PHP
-//
 chmod 777 logs/ temp/ -R
-//
 chown www-data:www-data
 ```
 
@@ -37,9 +33,6 @@ Acceso:
 
 http://ipdetuservidor/app/
 
-
-Queue::push('SendEmail', array('message' => $message));
-```
 
 Por futuras actualizaciones consulte a la [Documentación Oficial](http://www.idibox.com).
 
