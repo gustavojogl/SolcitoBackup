@@ -59,7 +59,7 @@ function BrowseBackupsPanel() {
 									styles: {'btn-danger': true},
 									click: function() {
 										$.getJSON('api/index.php?path=/archives/remove&title=' + encodeURIComponent(obj.title) + '&fileName=' + encodeURIComponent(archive.name) + '&key=' + Application.password(), function(info) {
-											Application.alert("Success!", "The archive was removed.", 'success');
+											Application.alert("Hecho!", "The archive was removed.", 'success');
 
 											self.load();
 										}).error(function (xhr) {
@@ -79,7 +79,7 @@ function BrowseBackupsPanel() {
 										Application.showRestoringBackupPanel();
 
 										$.getJSON('api/index.php?path=/archives/restore&title=' + encodeURIComponent(obj.title) + '&fileName=' + encodeURIComponent(archive.name) + '&database=' + (withDb ? 'true' : 'false') + '&files' + (withFiles ? 'true' : 'false') + '&key=' + Application.password(), function(info) {
-											Application.alert("Success!", "The archive was restored.", 'success');
+											Application.alert("Hecho!", "The archive was restored.", 'success');
 
 											Application.hideRestoringBackupPanel();
 										}).error(function (xhr) {
@@ -143,7 +143,7 @@ function BrowseBackupsPanel() {
 	this.remove = function (title) {
 		$.get('api/index.php?path=/backups/remove&title=' + title + '&key=' + Application.password(),
 			function () {
-				Application.alert("Success!", "The backup job was removed.", 'success');
+				Application.alert("Hecho!", "Backup Eliminado.", 'success');
 
 				self.load();
 			}).error(function (xhr) {
@@ -157,7 +157,7 @@ function BrowseBackupsPanel() {
 
 		$.getJSON('api/index.php?path=/backups/backup&title=' + title + '&key=' + Application.password(),
 			function (data) {
-				Application.alert("Success!", "The archive was successfully created.", 'success');
+				Application.alert("Hecho!", "Backup Creado.", 'success');
 
 				for (var i = data.warnings.length - 1; i >= 0; i--) {
 					Application.alert("Warning!", data.warnings[i], 'warning');

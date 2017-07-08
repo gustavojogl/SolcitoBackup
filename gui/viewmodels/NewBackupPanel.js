@@ -484,9 +484,9 @@ function NewBackupPanel(data) {
 
 		}, function () {
 			if (self.isEdit())
-				Application.alert("Success!", "The backup job was updated.", 'success');
+				Application.alert("Hecho!", "Backup Actualizado.", 'success');
 			else
-				Application.alert("Success!", "The backup job was added.", 'success');
+				Application.alert("Hecho!", "Backup Agregado.", 'success');
 
 			Application.hideNewBackupPanel();
 		}).error(function (xhr) {

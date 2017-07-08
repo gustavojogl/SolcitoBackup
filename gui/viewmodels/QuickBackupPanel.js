@@ -87,7 +87,7 @@ function QuickBackupPanel() {
 		},
 
 		function (data) {
-			Application.alert("Success!", "The archive was successfully created.", 'success');
+			Application.alert("Hecho!", "Backup Creado.", 'success');
 
 			window.location = 'api/index.php?path=/quick/download&key=' + Application.password();
 
