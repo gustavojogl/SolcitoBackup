@@ -63,7 +63,7 @@ foreach ($jobs as $backup)
 
 		$backup->InProgress = false;
 
-		$log_model->Log($logfile, "Backup successful");
+		$log_model->Log($logfile, "Backup echo");
 
 		// Send requested emails
 		if ($backup->emailMe)
@@ -72,15 +72,15 @@ foreach ($jobs as $backup)
 			{
 				$mail = new PHPMailer();
 
-				$mail->SetFrom($backup->email, 'SmartBackup');
+				$mail->SetFrom($backup->email, 'SolcitoBackup');
 				$mail->AddAddress($backup->email);
-				$mail->Subject = "Backup '". $backup->title ."' created at ". strftime("%d.%m.%Y %H:%M");
-				$mail->Body = "An archive for '". $backup->title ."' was created successfully!\n\n";
-				$mail->Body .= "Time: ". strftime("%d.%m.%Y %H:%M") ."\n";
+				$mail->Subject = "SolcitoBackup '". $backup->title ."' creado ". strftime("%d.%m.%Y %H:%M");
+				$mail->Body = "Tarea '". $backup->title ."' creada con exito!\n\n";
+				$mail->Body .= "Fecha y Hora: ". strftime("%d.%m.%Y %H:%M") ."\n";
 
 				if ($oldCount !== true && $oldCount !== 0)
 				{
-					$mail->Body .= $oldCount ." old archives were removed\n\n";
+					$mail->Body .= $oldCount ." archivos eliminados\n\n";
 				}
 
 				if (is_array($warnings) && count($warnings) > 0)
