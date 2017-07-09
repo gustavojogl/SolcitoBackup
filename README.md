@@ -17,8 +17,7 @@ git clone https://github.com/gustavojogl/SolcitoBackup.git app/
 Permisos:
 
 ```PHP
-chmod 777 logs/ temp/ -R
-chown www-data:www-data
+chmod 777 logs/ temp/ -R && chown www-data:www-data *
 ```
 
 Setear Clave de Acceso:
